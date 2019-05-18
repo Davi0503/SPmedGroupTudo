@@ -30,9 +30,9 @@ namespace Senai_Semestre2_Sprint2.Domains
         [Required(ErrorMessage = "Usuario inválido")]
         public int IdUsuario { get; set; }
 
-        public Clinicas IdClinicaNavigation { get; set; }
-        public Especialidades IdEspecialidadeNavigation { get; set; }
-        public Usuarios IdUsuarioNavigation { get; set; }
-        public ICollection<Consultas> Consultas { get; set; }
+        //public Clinicas IdClinicaNavigation { get; set; }
+        //public Especialidades IdEspecialidadeNavigation { get; set; }
+        //public Usuarios IdUsuarioNavigation { get; set; }
+        //public ICollection<Consultas> Consultas { get; set; }
     }
 }
