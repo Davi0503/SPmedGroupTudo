@@ -1,11 +1,21 @@
 .nav{
-    background-color: #14D6B5;
+    background-color: rgba(5, 197, 197, 0.808);
     width: 100vw;
     height: 64px;
     display: flex;
-    justify-content: space-between;
+    align-items: flex-end;
+    
 }
 
 a{
     font-size: 16pt
+}
+
+.btn{
+    float: right;
+    color: black;
+}
+
+.btnzin{
+    background-color: black;
 }

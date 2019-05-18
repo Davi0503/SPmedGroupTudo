@@ -1,5 +1,18 @@
 .fundo-consultas {
-    background-color: white;
+    background-color: rgb(19, 10, 143);
     width: 100vw;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    align-content: center;
+}
+
+.container{
+    width: 80%;
+    align-items: center;
+    margin-left: 0;
+    margin-right: 0;
+
 }

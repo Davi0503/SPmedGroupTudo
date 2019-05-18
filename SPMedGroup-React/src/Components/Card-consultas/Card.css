@@ -1,14 +1,42 @@
 .card {
-    background-color: rgb(230, 230, 230);
-    width: 35%;
+    background-color: rgba(95, 84, 252, 0.89);
+    width: 100%;
     margin: 25px auto;
     border-radius: 7px;
-    border-left: 7px solid #14D6B5;
-    padding: 20px 60px;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    
+    
 }
 
 .data-hora {
-    width: 55%;
+    width: 50%;
     display: flex;
-    justify-content: space-between
+    justify-content: space-between;
+    margin-left: 17rem;
+    
 }
+
+.doutor-info{
+    background-color: rgb(199, 199, 199);
+    width: 100%;
+    border-radius: 10px;
+    display: flex;  
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+
+}
+
+.batatinha{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 0;
+    margin-left: 0;
+}
+
+
+
