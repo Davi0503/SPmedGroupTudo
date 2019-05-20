@@ -6,10 +6,7 @@ namespace Senai_Semestre2_Sprint2.Domains
 {
     public partial class Medicos
     {
-        public Medicos()
-        {
-            Consultas = new HashSet<Consultas>();
-        }
+        
 
         public int Id { get; set; }
         [Required(ErrorMessage = "Nome inválido")]

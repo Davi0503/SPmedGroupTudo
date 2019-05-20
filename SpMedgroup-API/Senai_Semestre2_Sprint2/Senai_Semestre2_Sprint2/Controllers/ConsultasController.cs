@@ -31,11 +31,18 @@ namespace Senai_Semestre2_Sprint2.Controllers
 
         [HttpGet]
         [AllowAnonymous]
-        public IActionResult Listar() {
+        public IActionResult Listar()
+        {
+            try
+            {
 
-            string role = HttpContext.User.Claims.First(c => c.Type == ClaimTypes.Role).Value;
-            int Id = Convert.ToInt32(HttpContext.User.Claims.First(c => c.Type == JwtRegisteredClaimNames.Jti).Value);
-            return Ok(_consultasRepository.Listar(role, Id));
+                string role = HttpContext.User.Claims.First(c => c.Type == ClaimTypes.Role).Value;
+                int Id = Convert.ToInt32(HttpContext.User.Claims.First(c => c.Type == JwtRegisteredClaimNames.Jti).Value);
+                return Ok(_consultasRepository.Listar(role, Id));
+            }catch(Exception ex)
+            {
+                return BadRequest("Erro ao listar");
+            }
         }
 
         [HttpPost]

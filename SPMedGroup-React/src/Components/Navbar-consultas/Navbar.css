@@ -1,21 +1,32 @@
 .nav{
     background-color: rgba(5, 197, 197, 0.808);
-    width: 100vw;
-    height: 64px;
+    width: 100%;
+    height: 50px;
     display: flex;
-    align-items: flex-end;
-    
+    align-items: center;    
 }
 
 a{
     font-size: 16pt
 }
 
-.btn{
-    float: right;
-    color: black;
+
+.icon{
+    height: 100%;
+
+    width: auto;
 }
 
+.btn{
+    width: 100%;
+    height: 100%;
+}
+
+
 .btnzin{
-    background-color: black;
+
+    height: 100%;   
+    
+    
+    
 }

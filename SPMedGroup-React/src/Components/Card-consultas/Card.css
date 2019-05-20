@@ -1,17 +1,22 @@
-.card {
-    background-color: rgba(95, 84, 252, 0.89);
-    width: 100%;
-    margin: 25px auto;
-    border-radius: 7px;
-    border-radius: 10px;
-    align-items: center;
-    justify-content: center;
-    align-content: center;
+ .card {
+    margin-top: 3rem;
     
     
 }
+h1{
+    margin-top: 1rem;
+    color: aliceblue;
+}
 
-.data-hora {
+.card-header{
+    display: flex;
+}
+.card-body{
+    display: flex;
+    
+}
+
+/* .data-hora {
     width: 50%;
     display: flex;
     justify-content: space-between;
@@ -36,7 +41,7 @@
     justify-content: space-between;
     margin-right: 0;
     margin-left: 0;
-}
+} */
 
 
 

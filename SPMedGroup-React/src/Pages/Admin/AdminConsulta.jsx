@@ -20,30 +20,30 @@ class AdminConsulta extends Component {
 
     }
 
-    componentDidMount() {
-        fetch('https://spmedgroup.azurewebsites.net/api/usuarios/getmedicos',
-            {
-                headers: {
-                    "Content-Type": "application/json",
-                    "Authorization": "Bearer " + localStorage.getItem("usuario")
-                }
-            })
-            .then(response => response.json())
-            .then(data => this.setState({listaMedicos: data}))
-            .catch(erro => console.log(erro))
+    // componentDidMount() {
+    //     fetch('https://spmedgroup.azurewebsites.net/api/usuarios/getmedicos',
+    //         {
+    //             headers: {
+    //                 "Content-Type": "application/json",
+    //                 "Authorization": "Bearer " + localStorage.getItem("usuario")
+    //             }
+    //         })
+    //         .then(response => response.json())
+    //         .then(data => this.setState({listaMedicos: data}))
+    //         .catch(erro => console.log(erro))
 
-            fetch('https://spmedgroup.azurewebsites.net/api/usuarios/getpacientes',
-            {
-                headers: {
-                    "Content-Type": "application/json",
-                    "Authorization": "Bearer " + localStorage.getItem("usuario")
-                }
-            })
-            .then(response => response.json())
-            .then(data => this.setState({listaPacientes: data}))
-            .catch(erro => console.log(erro))
+    //         fetch('https://spmedgroup.azurewebsites.net/api/usuarios/getpacientes',
+    //         {
+    //             headers: {
+    //                 "Content-Type": "application/json",
+    //                 "Authorization": "Bearer " + localStorage.getItem("usuario")
+    //             }
+    //         })
+    //         .then(response => response.json())
+    //         .then(data => this.setState({listaPacientes: data}))
+    //         .catch(erro => console.log(erro))
             
-    }
+    // }
         
     atualizarData(e) {
         this.consulta.dataConsulta = e.target.value + 'T00:00:00'
