@@ -20,30 +20,30 @@ class AdminConsulta extends Component {
 
     }
 
-    // componentDidMount() {
-    //     fetch('https://spmedgroup.azurewebsites.net/api/usuarios/getmedicos',
-    //         {
-    //             headers: {
-    //                 "Content-Type": "application/json",
-    //                 "Authorization": "Bearer " + localStorage.getItem("usuario")
-    //             }
-    //         })
-    //         .then(response => response.json())
-    //         .then(data => this.setState({listaMedicos: data}))
-    //         .catch(erro => console.log(erro))
+    componentDidMount() {
+        fetch('',
+            {
+                headers: {
+                    "Content-Type": "application/json",
+                    "Authorization": "Bearer " + localStorage.getItem("usuario")
+                }
+            })
+            .then(response => response.json())
+            .then(data => this.setState({listaMedicos: data}))
+            .catch(erro => console.log(erro))
 
-    //         fetch('https://spmedgroup.azurewebsites.net/api/usuarios/getpacientes',
-    //         {
-    //             headers: {
-    //                 "Content-Type": "application/json",
-    //                 "Authorization": "Bearer " + localStorage.getItem("usuario")
-    //             }
-    //         })
-    //         .then(response => response.json())
-    //         .then(data => this.setState({listaPacientes: data}))
-    //         .catch(erro => console.log(erro))
+            fetch('',
+            {
+                headers: {
+                    "Content-Type": "application/json",
+                    "Authorization": "Bearer " + localStorage.getItem("usuario")
+                }
+            })
+            .then(response => response.json())
+            .then(data => this.setState({listaPacientes: data}))
+            .catch(erro => console.log(erro))
             
-    // }
+    }
         
     atualizarData(e) {
         this.consulta.dataConsulta = e.target.value + 'T00:00:00'
@@ -68,7 +68,7 @@ class AdminConsulta extends Component {
     cadastrar(e) {
         e.preventDefault()
 
-        fetch('https://spmedgroup.azurewebsites.net/api/consultas',
+        fetch('',
         {   method: 'POST',
             body : JSON.stringify(this.consulta),
             headers: {
@@ -84,10 +84,10 @@ class AdminConsulta extends Component {
         return(
             <div className="fundo-admin">
                 <Navbar/>
-                <div className="card cadastrar-usuario">
+                <div className="card card-admin cadastrar-usuario">
                     <form className="form-cons" method="" onSubmit={this.cadastrar.bind(this)}>
-                    <h1>Cadastrar Usuário</h1>
-                    <h2>Informações pessoais</h2>
+                    <h1>Cadastrar Consulta</h1>
+                    <h2>Informações</h2>
                     <input  name="datanascimento"
                                 className="input-cadastro" 
                                 type="date" 

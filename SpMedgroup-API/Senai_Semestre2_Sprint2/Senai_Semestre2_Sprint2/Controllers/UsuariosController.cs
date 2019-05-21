@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Senai_Semestre2_Sprint2.Domains;
@@ -12,6 +13,7 @@ namespace Senai_Semestre2_Sprint2.Controllers
     [Produces("application/json")]
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize(Roles = "administrador")]
     public class UsuariosController : ControllerBase
     {
         private IUsuariosRepository _usuariosRepository { get; set; }
@@ -30,7 +32,9 @@ namespace Senai_Semestre2_Sprint2.Controllers
             return Ok(_usuariosRepository.Listar());
         }
 
-        [HttpPost]
+        [HttpPost]   
+        [AllowAnonymous]
+        [Route("cadastro")]
         public IActionResult Cadastrar(Usuarios usuario) {
 
             _usuariosRepository.Cadastrar(usuario);

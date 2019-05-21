@@ -98,9 +98,25 @@ namespace Senai_Semestre2_Sprint2.Domains
 
                 entity.Property(e => e.IdPaciente).HasColumnName("ID_PACIENTE");
 
-                entity.Property(e => e.IdStatus).HasColumnName("ID_STATUS");         
+                entity.Property(e => e.IdStatus).HasColumnName("ID_STATUS");
 
-              
+                entity.HasOne(d => d.IdMedicosNavigation)
+                    .WithMany(p => p.Consultas)
+                    .HasForeignKey(d => d.IdMedicos)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK__CONSULTAS__ID_ME__5BE2A6F2");
+
+                entity.HasOne(d => d.IdPacienteNavigation)
+                    .WithMany(p => p.Consultas)
+                    .HasForeignKey(d => d.IdPaciente)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK__CONSULTAS__ID_PA__5AEE82B9");
+
+                entity.HasOne(d => d.IdStatusNavigation)
+                    .WithMany(p => p.Consultas)
+                    .HasForeignKey(d => d.IdStatus)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK__CONSULTAS__ID_ST__5CD6CB2B");
             });
 
             modelBuilder.Entity<Especialidades>(entity =>
@@ -150,7 +166,23 @@ namespace Senai_Semestre2_Sprint2.Domains
                     .HasMaxLength(12)
                     .IsUnicode(false);
 
-              
+                entity.HasOne(d => d.IdClinicaNavigation)
+                    .WithMany(p => p.Medicos)
+                    .HasForeignKey(d => d.IdClinica)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK__MEDICOS__ID_CLIN__5812160E");
+
+                entity.HasOne(d => d.IdEspecialidadeNavigation)
+                    .WithMany(p => p.Medicos)
+                    .HasForeignKey(d => d.IdEspecialidade)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK__MEDICOS__ID_ESPE__571DF1D5");
+
+                entity.HasOne(d => d.IdUsuarioNavigation)
+                    .WithMany(p => p.Medicos)
+                    .HasForeignKey(d => d.IdUsuario)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK__MEDICOS__ID_USUA__68487DD7");
             });
 
             modelBuilder.Entity<Pacientes>(entity =>
@@ -193,11 +225,11 @@ namespace Senai_Semestre2_Sprint2.Domains
                     .HasMaxLength(12)
                     .IsUnicode(false);
 
-                //entity.HasOne(d => d.IdUsuarioNavigation)
-                //    .WithMany(p => p.Pacientes)
-                //    .HasForeignKey(d => d.IdUsuario)
-                //    .OnDelete(DeleteBehavior.ClientSetNull)
-                //    .HasConstraintName("FK__PACIENTES__ID_US__4D94879B");
+                entity.HasOne(d => d.IdUsuarioNavigation)
+                    .WithMany(p => p.Pacientes)
+                    .HasForeignKey(d => d.IdUsuario)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK__PACIENTES__ID_US__4D94879B");
             });
 
             modelBuilder.Entity<StatusConsulta>(entity =>

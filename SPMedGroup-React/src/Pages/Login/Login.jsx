@@ -31,7 +31,7 @@ class Login extends Component {
 
         // http://localhost:5000/api/login
         // https://spmedgroup.azurewebsites.net/api/login
-        Axios.post("https://spmedgroup.azurewebsites.net/api/login", {
+        Axios.post("http://localhost:64582/api/Login", {
             email: this.state.email,
             senha: this.state.senha
         })
@@ -40,7 +40,10 @@ class Login extends Component {
                     console.log(data);
                     localStorage.setItem("usuario", data.data.token);
                     var credencial = Object.values(parseJwt())[2]
-                    if (credencial === "Paciente" || credencial === "Medico") {
+
+                    
+                    
+                    if (credencial === "Paciente" || credencial === "medico" || credencial == "1") {
                         this.props.history.push('/consultas');
                     } else {
                         this.props.history.push("/admin/usuario")

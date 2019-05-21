@@ -20,8 +20,8 @@ namespace Senai_Semestre2_Sprint2.Domains
         [Required(ErrorMessage = "Paciente status")]
         public int IdStatus { get; set; }
 
-    //    public Medicos IdMedicosNavigation { get; set; }
-    //    public Pacientes IdPacienteNavigation { get; set; }
-    //    public StatusConsulta IdStatusNavigation { get; set; }
+        public Medicos IdMedicosNavigation { get; set; }
+        public Pacientes IdPacienteNavigation { get; set; }
+        public StatusConsulta IdStatusNavigation { get; set; }
     }
 }

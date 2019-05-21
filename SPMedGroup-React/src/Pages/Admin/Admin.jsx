@@ -11,11 +11,6 @@ class Admin extends Component {
             rg: '',
             cpf: '',
             datanascimento: '',
-            logradouro: '',
-            numero: '',
-            bairro: '',
-            cidade: '',
-            estado: '',
             email: '',
             senha: '',
             idcredencial: ''
@@ -23,21 +18,27 @@ class Admin extends Component {
     }
 
     cadastrar(e) {
-        e.preventDefault()
+        e.preventDefault()      
 
-        fetch('https://spmedgroup.azurewebsites.net/api/usuarios',
+        
+        fetch('http://localhost:64582/api/Usuarios/cadastro',
             {
                 method: 'POST',
-                body: JSON.stringify(this.state),
+                body: JSON.stringify({
+                    email : this.state.email,
+                    senha : this.state.senha,
+                    permicao : this.state.idcredencial
+                }),
                 headers: {
                     "Content-Type": "application/json",
                     "Authorization": "Bearer " + localStorage.getItem("usuario")
                 }
             })
+
             .then(data => console.log(data))
             .catch(erro => console.log(erro))
 
-        this.props.history.push('/admin/usuario')
+        this.props.history.push('/admin/consulta')
     }
 
     atualizarNome(e) {
@@ -105,12 +106,12 @@ class Admin extends Component {
                 <Navbar />
                 <div className="container-adm">
                     <h1>Cadastrar Usuário</h1>
-                    <div className="card cadastrar-usuario">
+                    <div className="card card-admin cadastrar-usuario">
 
-                        
+
                         <form className="formulario" method="" onSubmit={this.cadastrar.bind(this)}>
                             <div className="informacoes-pessoais col-5">
-                            <h2>Informações do usuário</h2>
+                                <h2>Informações do usuário</h2>
                                 <input name="nome"
                                     className="input-cadastro"
                                     type="text"
@@ -144,7 +145,7 @@ class Admin extends Component {
                                 />
                             </div>
                             <div className="informacoes-login col-6">
-                                
+
                                 <input name="email"
                                     className="input-cadastro"
                                     type="text"
@@ -165,16 +166,17 @@ class Admin extends Component {
                                 />
                                 <select className="select-credencial" name="" id="selecionar-credencial" onChange={this.atualizarCredencial.bind(this)}>
                                     <option value="" defaultValue="selected">Selecione</option>
-                                    <option value="1">Administrador</option>
-                                    <option value="2">Medico</option>
-                                    <option value="3">Paciente</option>
+                                    <option value="administrador">Administrador</option>
+                                    <option value="medico">Medico</option>
+                                    <option value="paciente">Paciente</option>
                                 </select>
                                 <br />
-                               
+
                             </div>
-                            
+                            <button type="submit" className="botao-cadastrar">Cadastrar</button>
+
                         </form>
-                        <button type="submit" className="botao-cadastrar">Cadastrar</button>
+
                     </div>
                 </div>
             </div>
