@@ -6,11 +6,11 @@ namespace Senai_Semestre2_Sprint2.Domains
 {
     public partial class Usuarios
     {
-        public Usuarios()
-        {
-            Medicos = new HashSet<Medicos>();
-            Pacientes = new HashSet<Pacientes>();
-        }
+        //public Usuarios()
+        //{
+        //    Medicos = new HashSet<Medicos>();
+        //    Pacientes = new HashSet<Pacientes>();
+        //}
 
         public int Id { get; set; }
         [Required(ErrorMessage = "Email inválido")]
@@ -20,7 +20,7 @@ namespace Senai_Semestre2_Sprint2.Domains
         [Required(ErrorMessage = "Permicao inválida")]
         public string Permicao { get; set; }
 
-        public ICollection<Medicos> Medicos { get; set; }
-        public ICollection<Pacientes> Pacientes { get; set; }
+        //public ICollection<Medicos> Medicos { get; set; }
+        //public ICollection<Pacientes> Pacientes { get; set; }
     }
 }

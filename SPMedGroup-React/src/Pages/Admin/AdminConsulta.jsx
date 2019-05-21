@@ -85,9 +85,9 @@ class AdminConsulta extends Component {
             <div className="fundo-admin">
                 <Navbar/>
                 <div className="card cadastrar-usuario">
+                    <form className="form-cons" method="" onSubmit={this.cadastrar.bind(this)}>
                     <h1>Cadastrar Usuário</h1>
                     <h2>Informações pessoais</h2>
-                    <form method="" onSubmit={this.cadastrar.bind(this)}>
                     <input  name="datanascimento"
                                 className="input-cadastro" 
                                 type="date" 

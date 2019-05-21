@@ -1,17 +1,34 @@
-.cadastrar-usuario {
-    display: flex;
-    flex-direction: column
+.card{
+    width: 100%;
+    padding: 2rem;
+    align-items: center;
+    background-color: rgba(31, 31, 31, 0.918);
 }
 
-.cadastrar-usuario h1 {
-    margin: 0;
-    margin-bottom: 20px;
+.form-cons{
+    width: 60%;
+    align-items: center;
 }
+
+
+
+.container-adm{
+    width: 80%;
+}
+
+.fundo-admin{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 
 .cadastrar-usuario h2 {
-    font-size: 12pt;
+    font-size: 15pt;
     margin: 0;
     margin-bottom: 15px;
+    color: aliceblue;
+    margin-bottom: 2rem;
 }
 
 .input-cadastro {
@@ -21,6 +38,14 @@
     border-radius: 7px;
     margin-bottom: 25px;
     padding-left: 10px;
+    border-bottom: 1px,rgba(5, 197, 197, 0.808), solid
+}
+
+.formulario{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
 }
 
 .select-credencial {
@@ -37,22 +62,11 @@
 }
 
 .botao-cadastrar {
-    background-color: teal;
-    border: 0;
-    width: 35%;
-    height: 35px;
-    border-radius: 6px;
-    color: #fff;
-    font-size: 12pt;
-    font-weight: 500;
-    letter-spacing: 2px;
-    box-shadow: 1px 1px 5px #000;
-}
-
-.botao-cadastrar:active{
-    background-color: #fff;
-    color: teal;
-    outline: none
+    background-color: rgb(5, 197, 197);
+    border-radius: 10px;
+    color: black;
+    width: 15rem;
+    margin-top: 2rem;
 }
 
 .hora{

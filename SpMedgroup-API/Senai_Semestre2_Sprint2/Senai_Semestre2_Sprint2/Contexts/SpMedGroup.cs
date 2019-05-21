@@ -193,11 +193,11 @@ namespace Senai_Semestre2_Sprint2.Domains
                     .HasMaxLength(12)
                     .IsUnicode(false);
 
-                entity.HasOne(d => d.IdUsuarioNavigation)
-                    .WithMany(p => p.Pacientes)
-                    .HasForeignKey(d => d.IdUsuario)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__PACIENTES__ID_US__4D94879B");
+                //entity.HasOne(d => d.IdUsuarioNavigation)
+                //    .WithMany(p => p.Pacientes)
+                //    .HasForeignKey(d => d.IdUsuario)
+                //    .OnDelete(DeleteBehavior.ClientSetNull)
+                //    .HasConstraintName("FK__PACIENTES__ID_US__4D94879B");
             });
 
             modelBuilder.Entity<StatusConsulta>(entity =>
