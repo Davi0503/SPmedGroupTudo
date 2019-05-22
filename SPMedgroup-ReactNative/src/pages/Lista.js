@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
 import { StyleSheet, View, Text } from 'react-native';
 import { TextInput } from 'react-native-gesture-handler';
-import { Container, Content, Card, CardItem, Separator, Row } from 'native-base';
+import { Container, Content, Card, CardItem, Separator, Row, Title } from 'native-base';
 import { AccordionList } from "accordion-collapse-react-native";
 
 
 
 export default class App extends Component {
-//   static navigationOptions = {
-//     header: null    
-// };
+    static navigationOptions = {
+      header: null    
+  };
 
 
-  constructor(props) {    
+  constructor(props) {
     super(props);
     this.state = {
       list: [
@@ -41,19 +41,22 @@ export default class App extends Component {
 
   _body(item) {
     return (
-      <View style={style.color}>
-        <Text style={{ textAlign: 'center' }}>{item.body}</Text>
+      <View>
+        <View style={style.color}>
+          <Text style={{ textAlign: 'center' }}>{item.body}</Text>
+        </View>
       </View>
     );
   }
   render() {
     return (
       <View style={style.main}>
+        <Title style={style.titulo}>Batatinha</Title>
         <View style={style.list}>
           <AccordionList
-          
+
             list={this.state.list}
-          
+
             header={this._head}
             body={this._body}
           />
@@ -76,17 +79,23 @@ const style = StyleSheet.create({
     paddingTop: 70,
     backgroundColor: "rgba(19, 10, 143, 0.90)"
   },
-  list:{
+  list: {
+    marginTop: 20,
     width: "80%",
-    height: "100%",    
+    height: "100%",
   },
 
-  color:{
+  color: {
     backgroundColor: "#17cf91",
     padding: 10,
     width: "100%",
-    alignItems: "center",
     borderRadius: 5
+  },
+  body:{
+    width: "100%",
+  },
+  titulo:{
+    marginTop: 20,
   }
 
 })

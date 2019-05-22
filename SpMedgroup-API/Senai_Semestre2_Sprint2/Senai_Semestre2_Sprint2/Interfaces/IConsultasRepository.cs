@@ -9,7 +9,7 @@ namespace Senai_Semestre2_Sprint2.Repositories
 {
     public interface IConsultasRepository
     {
-        List<Consultas> Listar(string tipoUsuario, int Id);
+        List<ConsultaListDTO> Listar(string tipoUsuario, int Id);
         void Cadastrar(Consultas consulta);
         void Atualizar(AtualizarConsultaDTO consulta);
     }

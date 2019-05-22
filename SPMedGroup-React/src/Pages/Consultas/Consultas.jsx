@@ -43,7 +43,7 @@ class Consultas extends Component {
                 <div className="container">
                     <h1>Consultas</h1>
                     <div id="fundo-cards" className="fundo-cards">
-                        {this.state.listaconsultas.map(chave => { return <Card key={chave.id} especialidade={chave.especialidade} medico={chave.nomeMedico} data={chave.dataConsulta} hora={chave.horaConsulta} status={chave.status} /> })}
+                        {this.state.listaconsultas.map(chave => { return <Card key={chave.id} especialidade={chave.especialidade} medico={chave.medico} data={chave.data} status={chave.status} /> })}
                         {/* <Card especialidade="Neurologia" medico="Helena" data="10/10/2019" hora="19:00" status="Realizada" /> */}
                     </div>
                 </div>

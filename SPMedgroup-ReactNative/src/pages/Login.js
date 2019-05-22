@@ -26,6 +26,7 @@ class Login extends Component {
             >
                 <View style={style.overlay} />
                 <StatusBar
+                hidden={true}
                 backgroundColor="rgb(19, 10, 143)"></StatusBar>
                 <View style={style.main}>
                 
