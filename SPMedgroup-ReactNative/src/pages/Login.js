@@ -1,21 +1,52 @@
 import React, { Component } from 'react';
-import { StyleSheet, TextInput, Text, View, Button, ImageBackground, Image, StatusBar } from 'react-native';
+import { StyleSheet, TextInput, Text, View, Button, ImageBackground, Image, StatusBar, AsyncStorage } from 'react-native';
 import api from '../services/API.js'
+
 
 class Login extends Component {
     static navigationOptions = {
         header: null
     };
 
-
     constructor(props) {
         super(props);
-        this.state = { Email: "", Senha: "" };
+        this.state = { email: "", senha: "" };
     }
 
-    _realizaLogin() {
-        console.warn("lista");
+      _realizaLogin = async () =>{
+
+         await api.post("/login",{
+            email: this.state.email,
+            senha: this.state.senha
+        }).then(resposta =>{
+            if(resposta.status == 200){
+
+                AsyncStorage.setItem("userToken", resposta.data.token).then(() => {
+                    this.props.navigation.navigate("lista");
+                });
+                
+            }
+        } );
+        
+            
+            
+            
+            
+
+       
+        // ).then(async() => {
+        //     console.warn("entrou aqui" + res.status);
+        //     if (res.status == 200){
+        //          await AsyncStorage.setItem("userToken", res.data.token);
+        //         console.warn(res.data.token);
+        //         this.props.navigation.navigate("lista");
+        //     }
+        // }).catch(error => {
+        //     console.warn(error)
+        // })   
     }
+
+
 
     render() {
         return (            
@@ -41,6 +72,7 @@ class Login extends Component {
                             style={style.inputLogin}
                             placeholderTextColor="#baf7e3"
                             TextColor="#17cf91"
+                            onChangeText={email => this.setState({email})}
                             
                         />
 
@@ -50,12 +82,14 @@ class Login extends Component {
                             underlineColorAndroid="#17cf91"
                             placeholderTextColor="#baf7e3"
                             secureTextEntry={true}
+                            onChangeText={senha => this.setState({senha})}
+
                         />
                       
                         <Button
                             title="Login"
                             color="#17cf91"
-                            onPress={() => this.props.navigation.navigate("lista")}
+                            onPress={this._realizaLogin}
                         />
                         
                     </View>

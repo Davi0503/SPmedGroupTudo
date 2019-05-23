@@ -17,10 +17,12 @@ export default class App extends Component {
     this.state = {
       list: [
         {
+          medico: 'davizin',
           title: 'Getting Started',
           body: 'React native Accordion/Collapse component, very good to use in toggles & show/hide content'
         },
         {
+          medico: 'davizin',
           title: 'Components',
           body: 'AccordionList,Collapse,CollapseHeader & CollapseBody'
         }
@@ -34,7 +36,7 @@ export default class App extends Component {
   _head(item) {
     return (
       <Separator bordered style={{ alignItems: 'center', borderRadius: 5 }}>
-        <Text>{item.title}</Text>
+        <Text>{item.medico}</Text>
       </Separator>
     );
   }
@@ -43,7 +45,7 @@ export default class App extends Component {
     return (
       <View>
         <View style={style.color}>
-          <Text style={{ textAlign: 'center' }}>{item.body}</Text>
+          <Text style={{ textAlign: 'center' }}>{item.medico}</Text>
         </View>
       </View>
     );
