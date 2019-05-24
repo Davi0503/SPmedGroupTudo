@@ -1,20 +1,23 @@
 import React, { Component } from 'react';
 import { StyleSheet, View, Text } from 'react-native';
-import { TextInput } from 'react-native-gesture-handler';
 import { Container, Content, Card, CardItem, Separator, Row, Title } from 'native-base';
 import { AccordionList } from "accordion-collapse-react-native";
+import api from '../services/API.js';
+import AsyncStorage from '@react-native-community/async-storage';
+
 
 
 
 export default class App extends Component {
-    static navigationOptions = {
-      header: null    
+  static navigationOptions = {
+    header: null
   };
 
 
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
+      // token: '',
       list: [
         {
           medico: 'davizin',
@@ -28,7 +31,41 @@ export default class App extends Component {
         }
       ],
     }
+
   }
+
+  componentWillMount() {
+    this._buscarLista();
+
+  }
+
+
+  _buscarToken = async () => {
+
+    const token = await AsyncStorage.getItem("userToken");
+
+
+    this.setState({ token: token })
+  }
+
+  _buscarLista = async () => {
+    await this._buscarToken();
+
+    await api.get('/Consultas', {
+      headers: {
+        'Authorization': 'Bearer ' + (this.state.token)
+      }
+    })
+      .then(resposta => {        
+        this.setState({ list: resposta.data });
+      })
+      .catch(error => {
+        console.warn(error);
+      })
+
+  }
+
+
 
 
 
@@ -36,7 +73,7 @@ export default class App extends Component {
   _head(item) {
     return (
       <Separator bordered style={{ alignItems: 'center', borderRadius: 5 }}>
-        <Text>{item.medico}</Text>
+        <Text>{item.data}</Text>
       </Separator>
     );
   }
@@ -45,7 +82,11 @@ export default class App extends Component {
     return (
       <View>
         <View style={style.color}>
-          <Text style={{ textAlign: 'center' }}>{item.medico}</Text>
+          <Text>Paciente: {item.paciente}</Text>
+          <Text>Médico: {item.medico}</Text>
+          <Text>Status: {item.status}</Text>
+          <Text>Descrição: {item.descricao}</Text>
+
         </View>
       </View>
     );
@@ -53,7 +94,7 @@ export default class App extends Component {
   render() {
     return (
       <View style={style.main}>
-        <Title style={style.titulo}>Batatinha</Title>
+        <Title style={style.titulo}>Minhas Consultas</Title>
         <View style={style.list}>
           <AccordionList
 
@@ -93,10 +134,10 @@ const style = StyleSheet.create({
     width: "100%",
     borderRadius: 5
   },
-  body:{
+  body: {
     width: "100%",
   },
-  titulo:{
+  titulo: {
     marginTop: 20,
   }
 

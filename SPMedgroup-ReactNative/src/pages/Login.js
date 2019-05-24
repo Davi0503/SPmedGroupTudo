@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { StyleSheet, TextInput, Text, View, Button, ImageBackground, Image, StatusBar, AsyncStorage } from 'react-native';
-import api from '../services/API.js'
+import { StyleSheet, TextInput, Text, View, Button, ImageBackground, Image, StatusBar } from 'react-native';
+import api from '../services/API.js';
+import AsyncStorage from '@react-native-community/async-storage';
 
 
 class Login extends Component {
@@ -10,7 +11,7 @@ class Login extends Component {
 
     constructor(props) {
         super(props);
-        this.state = { email: "", senha: "" };
+        this.state = { email: "mariana@outlook.com", senha: "Mariana" };
     }
 
       _realizaLogin = async () =>{
@@ -74,6 +75,7 @@ class Login extends Component {
                             TextColor="#17cf91"
                             onChangeText={email => this.setState({email})}
                             
+                            
                         />
 
                         <TextInput
@@ -83,6 +85,7 @@ class Login extends Component {
                             placeholderTextColor="#baf7e3"
                             secureTextEntry={true}
                             onChangeText={senha => this.setState({senha})}
+                            
 
                         />
                       
