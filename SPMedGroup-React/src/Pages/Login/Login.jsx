@@ -29,8 +29,7 @@ class Login extends Component {
 
         e.preventDefault()
 
-        // http://localhost:5000/api/login
-        // https://spmedgroup.azurewebsites.net/api/login
+        
         Axios.post("http://localhost:64582/api/Login", {
             email: this.state.email,
             senha: this.state.senha
