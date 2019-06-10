@@ -2,6 +2,8 @@ import React, {Component} from 'react'
 
 import Navbar from '../../Components/Navbar-consultas/Navbar'
 
+//refazer request de consultas 
+
 class AdminConsulta extends Component {
     constructor() {
         super();

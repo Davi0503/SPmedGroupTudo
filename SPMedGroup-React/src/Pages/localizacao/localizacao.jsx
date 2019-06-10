@@ -1,6 +1,5 @@
 import Navbar from '../../Components/Navbar-consultas/Navbar.jsx'
 import React, { Component } from 'react'
-import './localizacao.css';
 
 
 class localizacao extends Component {

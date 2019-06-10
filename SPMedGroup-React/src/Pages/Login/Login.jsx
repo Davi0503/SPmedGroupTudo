@@ -30,7 +30,7 @@ class Login extends Component {
         e.preventDefault()
 
         
-        Axios.post("http://localhost:64582/api/Login", {
+        Axios.post("http://192.168.3.48:5000/api/Login", {
             email: this.state.email,
             senha: this.state.senha
         })
@@ -41,8 +41,8 @@ class Login extends Component {
                     var credencial = Object.values(parseJwt())[2]
 
                     
-                    
-                    if (credencial === "Paciente" || credencial === "medico" || credencial == "1") {
+                    debugger
+                    if (credencial === "paciente" || credencial === "medico" || credencial == "1") {
                         this.props.history.push('/consultas');
                     } else {
                         this.props.history.push("/admin/usuario")

@@ -55,7 +55,7 @@ namespace Senai_Semestre2_Sprint2.Repositories
                 if (tipoUsuario == "administrador")
                 {
                     List<Consultas> lista =
-                       ctx.Consultas.Where(x => x.IdPaciente == Id)
+                       ctx.Consultas
                        .Include(x => x.IdPacienteNavigation)
                        .Include(x => x.IdMedicosNavigation)
                        .Include(x => x.IdStatusNavigation)
@@ -81,16 +81,16 @@ namespace Senai_Semestre2_Sprint2.Repositories
                 }
                 else if (tipoUsuario == "medico")
                 {
-                    List<Consultas> lista =
-                         ctx.Consultas.Where(x => x.IdMedicos == Id)
-                         .Include(x => x.IdPacienteNavigation)
+                   Medicos usuarioID = ctx.Medicos.Where(x => x.IdUsuario == Id).FirstOrDefault();
+
+                    List<Consultas> lista = ctx.Consultas
+                        .Where(x => x.IdMedicos == usuarioID.Id)
                         .Include(x => x.IdPacienteNavigation)
+                        .Include(x => x.IdMedicosNavigation)
                         .Include(x => x.IdStatusNavigation)
-                        .Include(x => x.Descricao)
-                        .Include(x => x.DataConsulta)
                         .ToList();
 
-                    foreach(var x  in lista)
+                    foreach (var x  in lista)
                     {
                         ConsultaListDTO consulta = new ConsultaListDTO()
                         {
@@ -110,8 +110,10 @@ namespace Senai_Semestre2_Sprint2.Repositories
 
                 } else if (tipoUsuario == "paciente" || tipoUsuario == "1")
                 {
+                    Pacientes usuarioID = ctx.Pacientes.Where(x => x.IdUsuario == Id).FirstOrDefault();
+
                     List<Consultas> lista = ctx.Consultas
-                        .Where(x => x.IdPaciente == Id)
+                        .Where(x => x.IdPaciente == usuarioID.Id)
                         .Include(x => x.IdPacienteNavigation)
                         .Include(x => x.IdMedicosNavigation)
                         .Include(x => x.IdStatusNavigation)                        

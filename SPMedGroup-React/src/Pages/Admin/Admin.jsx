@@ -21,7 +21,7 @@ class Admin extends Component {
         e.preventDefault()      
 
         
-        fetch('http://localhost:64582/api/Usuarios/cadastro',
+        fetch('http://192.168.3.48:5000/api/Usuarios/cadastro',
             {
                 method: 'POST',
                 body: JSON.stringify({
