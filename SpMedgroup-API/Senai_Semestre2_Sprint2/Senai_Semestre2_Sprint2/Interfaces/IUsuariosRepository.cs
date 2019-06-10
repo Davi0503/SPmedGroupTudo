@@ -13,5 +13,6 @@ namespace Senai_Semestre2_Sprint2.Repositories
         List<Usuarios> Listar();
         Usuarios BuscarPorEmail(LoginDTO login);
         Usuarios VerificarSeExiste(string email);
+        Usuarios pegandoID(string email);
     }
 }

@@ -54,3 +54,17 @@ C:\Users\44851410808\Desktop\SpMedGroupTudo\SpMedgroup-API\Senai_Semestre2_Sprin
 C:\Users\44851410808\Desktop\SpMedGroupTudo\SpMedgroup-API\Senai_Semestre2_Sprint2\Senai_Semestre2_Sprint2\bin\Debug\netcoreapp2.1\Senai_Semestre2_Sprint2.dll
 C:\Users\44851410808\Desktop\SpMedGroupTudo\SpMedgroup-API\Senai_Semestre2_Sprint2\Senai_Semestre2_Sprint2\bin\Debug\netcoreapp2.1\Senai_Semestre2_Sprint2.pdb
 C:\Users\44851410808\Desktop\SpMedGroupTudo\SpMedgroup-API\Senai_Semestre2_Sprint2\Senai_Semestre2_Sprint2\obj\Debug\netcoreapp2.1\Senai_Semestre2_Sprint2.RazorTargetAssemblyInfo.cache
+C:\Users\44851410808\Desktop\Nova pasta\SPmedGroupTudo\SpMedgroup-API\Senai_Semestre2_Sprint2\Senai_Semestre2_Sprint2\bin\Debug\netcoreapp2.1\Senai_Semestre2_Sprint2.deps.json
+C:\Users\44851410808\Desktop\Nova pasta\SPmedGroupTudo\SpMedgroup-API\Senai_Semestre2_Sprint2\Senai_Semestre2_Sprint2\bin\Debug\netcoreapp2.1\Senai_Semestre2_Sprint2.runtimeconfig.json
+C:\Users\44851410808\Desktop\Nova pasta\SPmedGroupTudo\SpMedgroup-API\Senai_Semestre2_Sprint2\Senai_Semestre2_Sprint2\bin\Debug\netcoreapp2.1\Senai_Semestre2_Sprint2.runtimeconfig.dev.json
+C:\Users\44851410808\Desktop\Nova pasta\SPmedGroupTudo\SpMedgroup-API\Senai_Semestre2_Sprint2\Senai_Semestre2_Sprint2\bin\Debug\netcoreapp2.1\Senai_Semestre2_Sprint2.dll
+C:\Users\44851410808\Desktop\Nova pasta\SPmedGroupTudo\SpMedgroup-API\Senai_Semestre2_Sprint2\Senai_Semestre2_Sprint2\bin\Debug\netcoreapp2.1\Senai_Semestre2_Sprint2.pdb
+C:\Users\44851410808\Desktop\Nova pasta\SPmedGroupTudo\SpMedgroup-API\Senai_Semestre2_Sprint2\Senai_Semestre2_Sprint2\obj\Debug\netcoreapp2.1\Senai_Semestre2_Sprint2.csprojAssemblyReference.cache
+C:\Users\44851410808\Desktop\Nova pasta\SPmedGroupTudo\SpMedgroup-API\Senai_Semestre2_Sprint2\Senai_Semestre2_Sprint2\obj\Debug\netcoreapp2.1\Senai_Semestre2_Sprint2.csproj.CoreCompileInputs.cache
+C:\Users\44851410808\Desktop\Nova pasta\SPmedGroupTudo\SpMedgroup-API\Senai_Semestre2_Sprint2\Senai_Semestre2_Sprint2\obj\Debug\netcoreapp2.1\Senai_Semestre2_Sprint2.RazorAssemblyInfo.cache
+C:\Users\44851410808\Desktop\Nova pasta\SPmedGroupTudo\SpMedgroup-API\Senai_Semestre2_Sprint2\Senai_Semestre2_Sprint2\obj\Debug\netcoreapp2.1\Senai_Semestre2_Sprint2.RazorAssemblyInfo.cs
+C:\Users\44851410808\Desktop\Nova pasta\SPmedGroupTudo\SpMedgroup-API\Senai_Semestre2_Sprint2\Senai_Semestre2_Sprint2\obj\Debug\netcoreapp2.1\Senai_Semestre2_Sprint2.AssemblyInfoInputs.cache
+C:\Users\44851410808\Desktop\Nova pasta\SPmedGroupTudo\SpMedgroup-API\Senai_Semestre2_Sprint2\Senai_Semestre2_Sprint2\obj\Debug\netcoreapp2.1\Senai_Semestre2_Sprint2.AssemblyInfo.cs
+C:\Users\44851410808\Desktop\Nova pasta\SPmedGroupTudo\SpMedgroup-API\Senai_Semestre2_Sprint2\Senai_Semestre2_Sprint2\obj\Debug\netcoreapp2.1\Senai_Semestre2_Sprint2.RazorTargetAssemblyInfo.cache
+C:\Users\44851410808\Desktop\Nova pasta\SPmedGroupTudo\SpMedgroup-API\Senai_Semestre2_Sprint2\Senai_Semestre2_Sprint2\obj\Debug\netcoreapp2.1\Senai_Semestre2_Sprint2.dll
+C:\Users\44851410808\Desktop\Nova pasta\SPmedGroupTudo\SpMedgroup-API\Senai_Semestre2_Sprint2\Senai_Semestre2_Sprint2\obj\Debug\netcoreapp2.1\Senai_Semestre2_Sprint2.pdb

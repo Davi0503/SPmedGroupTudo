@@ -12717,11 +12717,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\44851410808\\Desktop\\SpMedGroupTudo\\SpMedgroup-API\\Senai_Semestre2_Sprint2\\Senai_Semestre2_Sprint2\\Senai_Semestre2_Sprint2.csproj",
+      "projectUniqueName": "C:\\Users\\44851410808\\Desktop\\Nova pasta\\SPmedGroupTudo\\SpMedgroup-API\\Senai_Semestre2_Sprint2\\Senai_Semestre2_Sprint2\\Senai_Semestre2_Sprint2.csproj",
       "projectName": "Senai_Semestre2_Sprint2",
-      "projectPath": "C:\\Users\\44851410808\\Desktop\\SpMedGroupTudo\\SpMedgroup-API\\Senai_Semestre2_Sprint2\\Senai_Semestre2_Sprint2\\Senai_Semestre2_Sprint2.csproj",
+      "projectPath": "C:\\Users\\44851410808\\Desktop\\Nova pasta\\SPmedGroupTudo\\SpMedgroup-API\\Senai_Semestre2_Sprint2\\Senai_Semestre2_Sprint2\\Senai_Semestre2_Sprint2.csproj",
       "packagesPath": "C:\\Users\\44851410808\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\44851410808\\Desktop\\SpMedGroupTudo\\SpMedgroup-API\\Senai_Semestre2_Sprint2\\Senai_Semestre2_Sprint2\\obj\\",
+      "outputPath": "C:\\Users\\44851410808\\Desktop\\Nova pasta\\SPmedGroupTudo\\SpMedgroup-API\\Senai_Semestre2_Sprint2\\Senai_Semestre2_Sprint2\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

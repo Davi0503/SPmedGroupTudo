@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Senai_Semestre2_Sprint2.Domains;
+using Senai_Semestre2_Sprint2.DTOs;
 using Senai_Semestre2_Sprint2.Repositories;
 
 namespace Senai_Semestre2_Sprint2.Controllers
@@ -41,7 +42,7 @@ namespace Senai_Semestre2_Sprint2.Controllers
 
             return Ok();
 
-        }
+        }        
 
     }
 }
