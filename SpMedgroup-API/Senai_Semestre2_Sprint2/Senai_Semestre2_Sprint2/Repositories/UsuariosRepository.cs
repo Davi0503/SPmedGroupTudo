@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Senai_Semestre2_Sprint2.Domains;
+using Senai_Semestre2_Sprint2.DTOs;
 using Senai_Semestre2_Sprint2.DTOs.LoginDTO;
 
 namespace Senai_Semestre2_Sprint2.Repositories
@@ -73,6 +74,53 @@ namespace Senai_Semestre2_Sprint2.Repositories
                 return usuario;
 
             }
+        }
+
+        public List<MedicoListagem> listarmedicos()
+        {
+            List<MedicoListagem> listademedicos = new List<MedicoListagem>();
+
+            using (SpMedGroup ctx = new SpMedGroup())
+            {
+
+                List<Medicos> medicoslist = ctx.Medicos.ToList();
+
+                foreach(Medicos medico in medicoslist)
+                {
+                    MedicoListagem mediconovo = new MedicoListagem()
+                    {
+                        Id = medico.Id,
+                        Nome = medico.Nome                        
+                    };
+                    listademedicos.Add(mediconovo);
+                }
+            }
+            return listademedicos;
+
+        }
+
+        public List<PacientesListagem> listarpaciente()
+        {
+            List<PacientesListagem> listadepacientes = new List<PacientesListagem>();
+
+            using (SpMedGroup ctx = new SpMedGroup())
+            {
+                List<Usuarios> listapacientes = ctx.Usuarios.ToList();
+
+                List<Pacientes> pacientelist = ctx.Pacientes.ToList();
+
+                foreach (Pacientes medico in pacientelist)
+                {
+                    PacientesListagem pacientenovo = new PacientesListagem()
+                    {
+                        Id = medico.Id,
+                        Nome = medico.Nome
+                    };
+                    listadepacientes.Add(pacientenovo);
+                }
+            }
+            return listadepacientes;
+
         }
     }
 }

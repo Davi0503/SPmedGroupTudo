@@ -39,10 +39,27 @@ namespace Senai_Semestre2_Sprint2.Controllers
         }
 
         [HttpPost]
-        [Authorize(Roles = "administrador")]
-        public IActionResult Cadastrar(Consultas consulta)
+        [Route("inserir")]
+        //[Authorize(Roles = "administrador")]
+        [AllowAnonymous]
+        public IActionResult Cadastrar(ConsultasCadastroDTO consulta)
         {
-            _consultasRepository.Cadastrar(consulta);
+
+            Consultas consultaNovo = new Consultas()
+            {
+
+                DataAgendamento = DateTime.Now,
+                IdMedicos = consulta.IdMedico,
+                IdPaciente = consulta.IdPaciente,
+                IdStatus = 1,
+                Descricao = "agendado",
+                DataConsulta = consulta.DataConsulta,
+            };
+
+
+
+
+            _consultasRepository.Cadastrar(consultaNovo);
 
             return Ok();
         }

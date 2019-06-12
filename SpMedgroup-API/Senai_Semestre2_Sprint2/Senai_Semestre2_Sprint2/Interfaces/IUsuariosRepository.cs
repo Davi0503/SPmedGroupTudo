@@ -1,4 +1,5 @@
 ﻿using Senai_Semestre2_Sprint2.Domains;
+using Senai_Semestre2_Sprint2.DTOs;
 using Senai_Semestre2_Sprint2.DTOs.LoginDTO;
 using System;
 using System.Collections.Generic;
@@ -14,5 +15,8 @@ namespace Senai_Semestre2_Sprint2.Repositories
         Usuarios BuscarPorEmail(LoginDTO login);
         Usuarios VerificarSeExiste(string email);
         Usuarios pegandoID(string email);
+        List<MedicoListagem> listarmedicos();
+        List<PacientesListagem> listarpaciente();
+        
     }
 }

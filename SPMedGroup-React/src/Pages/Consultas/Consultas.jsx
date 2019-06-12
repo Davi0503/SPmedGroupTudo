@@ -19,7 +19,7 @@ class Consultas extends Component {
 
     carregarDados() {
 
-        fetch('http://192.168.3.48:5000/api/Consultas',
+        fetch('http://192.168.3.48:5000/api/Consultas/inserir',
             {
                 headers: {
                     "Content-Type": "application/json",

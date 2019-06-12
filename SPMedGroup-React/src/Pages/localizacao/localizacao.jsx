@@ -14,10 +14,17 @@ class localizacao extends Component {
                 <div className="back">
                     <div className="card">
 
-                        <iframe title="gmap" id="gmap_canvas" src="https://maps.google.com/maps?q=s%C3%A3o%20paulo&t=&z=11&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
-                        </iframe>
+                        <input name="latitude"
+                            className="input-cadastro"
+                            type="text"
+                            placeholder="Latitude"
+                        />
 
-
+                        <input name="latitude"
+                            className="input-cadastro"
+                            type="text"
+                            placeholder="longitude"
+                        />
 
                     </div>
 

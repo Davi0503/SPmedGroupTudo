@@ -26,9 +26,7 @@ namespace Senai_Semestre2_Sprint2.Controllers
 
         [HttpGet]
 
-        public IActionResult Listar() {
-
-           
+        public IActionResult Listar() {           
 
             return Ok(_usuariosRepository.Listar());
         }
@@ -42,7 +40,29 @@ namespace Senai_Semestre2_Sprint2.Controllers
 
             return Ok();
 
-        }        
+        }
+
+
+        [HttpGet]
+        [Route("Medicos")]
+        public IActionResult ListarMedicos()
+        {
+
+            return Ok(_usuariosRepository.listarmedicos());
+        }
+
+
+        [HttpGet]
+        [Route("Pacientes")]
+        public IActionResult ListarPacientes()
+        {
+
+            return Ok(_usuariosRepository.listarpaciente());
+        }
+
+
+
+
 
     }
 }
